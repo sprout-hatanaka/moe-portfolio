@@ -1,0 +1,304 @@
+/* アニメーション */
+@keyframes bound {
+    0% { transform:translateY(0) }
+    5% { transform:translateY(0) }
+    10% { transform:translateY(0) }
+    20% { transform:translateY(-4px) }
+    25% { transform:translateY(0) }
+    30% { transform:translateY(-2px) }
+    50% { transform:translateY(0) }
+    100% { transform:translateY(0) }
+}
+
+@keyframes rotateRight {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateLeft {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(-360deg);
+    }
+}
+
+
+
+/* 共通 */
+body {
+    /* background-color: azure; */
+    min-height: 100vh;
+    /* font-family: "Noto Sans JP", sans-serif; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background: url(./bodybg.png) no-repeat 80% top; */
+}
+
+body p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/* ヘッダー */
+.head {
+    width: 300px;
+    margin-top: 66px;
+    /* background-color: bisque; */
+}
+.head .logo {
+    height: 130px;
+    /* font-family: "Alumni Sans Pinstripe", sans-serif; */
+    font-size: 29px;
+    /* background: url(./logoimg.png) no-repeat ; */
+    /* background-color: aqua; */
+    position: relative;
+}
+.head .logo h1 {
+    padding: 40px 0 0 30px;
+}
+.tri1 {
+    width: 84.5px;
+    height: 70px;
+    position: absolute;
+    top: 24%;
+    left: 0;
+    animation: rotateRight 3s linear infinite;
+}
+.tri2 {
+    width: 61.5px;
+    height: 76px;
+    position: absolute;
+    top: 0%;
+    left: 24%;
+    animation: rotateLeft 2s linear infinite;
+}
+.tri3 {
+    width: 33px;
+    height: 69px;
+    position: absolute;
+    /* top: 47%;
+    left: 14%; */
+    top: 52%;
+    left: 25%;
+    animation: rotateRight 4s linear infinite;
+}
+
+
+
+.head nav {
+    width: 300px;
+    margin: 40px auto;
+}
+.head nav ul li {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 46px;
+    color: #aaa;
+}
+.head nav ul li.active{
+    color: #000;
+}
+.head nav ul li.active::before{
+    content: "▽";
+    color: #000;
+    margin-left: -20px;
+    margin-right: 10px;
+}
+.head nav .contact {
+    margin-top: 20px;
+    display: flex;
+}
+.head nav .contact .fav {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    /* background: url(./favicon24.png); */
+}
+
+/* ----------------------------------------------------------------------- */
+/* メイン */
+.mainArea {
+    width: 1000px;
+    margin-top: 15vh;
+    /* background-color: aliceblue; */
+}
+.contentBox {
+    width: 800px;
+    margin: 0 auto;
+}
+.contentBox h2 {
+    font-weight: bold;
+    font-size: 41px;
+}
+.contentBox h2 .jp {
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.contentBox h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.contentBox .mainContent {
+    margin-top: 40px;
+}
+
+
+/* Topのみ反映 */
+.contentBox h2.top {
+    padding-top: 50px;
+    line-height: 46px;
+    font-size: 45px;
+}
+.contentBox h2 .job {
+    font-size: 26px;
+}
+.contentBox .mainContent .scroll {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+.contentBox .mainContent .scrollText {
+    border-bottom: 1px solid;
+}
+.contentBox .mainContent .scrollIcon {
+    animation-name: bound;
+    animation-duration: 2s;
+    /* animation-timing-function: ease; */
+    animation-iteration-count: infinite;
+}
+
+
+/* Worksのみ反映 */
+.contentBox .mainContent .works {
+    display: grid;
+    grid-template-rows: 225px 225px;
+    grid-template-columns: 33% 33% 33%;
+}
+.workFigure {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+.works h3 {
+    padding-top: 3px;
+}
+
+/* Aboutのみ反映 */
+.contentBox .mainContent .myName{
+    font-weight: bold;
+    font-size: 16px;
+}
+.contentBox .mainContent .profDetails {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+.profDetail {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detailImg {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    /* background-color: #BBE6E6; */
+}
+.detailTitle {
+    margin-top: 10px;
+}
+.detailCaption {
+    width: 80%;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+/* Skillsのみ反映 */
+.skills {
+    display: flex;
+    padding-top: 15px;
+}
+.skills h3 {
+    padding-bottom: 20px;
+}
+.skills ul li{
+    list-style-type: disc;
+    list-style-position: inside;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+.skills .left {
+    border-right: 1px solid;
+    padding-right: 40px;
+    margin-right: 40px;
+}
+.skills .future {
+    padding-top: 50px;
+}
+
+/* Likeのみ反映 */
+.mainContent .pictureSection {
+    width: 800px;
+    margin-top: 20px;
+    position: absolute;
+}
+.pictureSection .pictures {
+    display: grid;
+    grid-template-rows: 330px;
+    grid-template-columns: 32% 49% 13%;
+    column-gap: 3%;
+}
+/* .area1 {
+    background-color: #aaa;
+}
+.area2 {
+    background-color: #aaa;
+}
+.area3 {
+    background-color: #aaa;
+} */
+.pictureSection .prevButton {
+    position: absolute;
+    left: -1%;
+    top: 43%;
+}
+.pictureSection .nextButton {
+    position: absolute;
+    right: -1%;
+    top: 43%;
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+
+/* フッター */
+.foot {
+    width: 100%;
+    height: 18vh;
+    padding: 10px;
+    color: #fff;
+    /* background-color: #BBE6E6; */
+    /* background: url(./gradient1.jpg) no-repeat left 70%/cover; */
+    /* font-size: 12px; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: -1;
+}
