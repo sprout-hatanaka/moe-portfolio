@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# .next/とnode_modules を Git 管理から除外する
+node_modules/
+.next/
