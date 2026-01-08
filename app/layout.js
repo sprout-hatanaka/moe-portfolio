@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WheelHandler from "@/components/WheelHandler";
+
 import 'destyle.css'
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css"
@@ -19,6 +21,7 @@ const RootLayout = ({children}) => {
     <html lang="ja">
       <body className= {notoSansJP.className} style={{background:"url(bodybg2.png) no-repeat 98% top"}}>
         <Header />
+        <WheelHandler />
         <main className="mainArea">{children}</main>
         <Footer />
       </body>

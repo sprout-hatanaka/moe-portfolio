@@ -1,36 +1,4 @@
-"use client";  // クライアントコンポーネントにする
-
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { CiCircleChevDown } from "react-icons/ci";
-
 export default function Home() {
-  const router = useRouter();
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const handleWheel = (e) => {
-      if (isAnimating) return;
-
-      if (e.deltaY > 0) {
-        setIsAnimating(true);
-        router.push("/like");
-        setTimeout(() => setIsAnimating(false), 1000);
-      }
-      if (e.deltaY < 0) {
-        setIsAnimating(true);
-        router.push("/about");
-        setTimeout(() => setIsAnimating(false), 1000);
-      }
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: true });
-
-    return () => {
-      window.removeEventListener("wheel", handleWheel);
-    };
-  }, [isAnimating, router]);
-
   return (
     <div className="contentBox">
         <h2>
