@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Works",
+};
+
 export default function Home() {
   return (
     <div className="contentBox">

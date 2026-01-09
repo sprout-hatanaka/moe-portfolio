@@ -10,7 +10,7 @@ const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: {
-    template: "%s | MOE - Portfolio",
+    template: "MOE - Portfolio | %s",
     default:  "MOE - Portfolio",
   },
   description: "エンジニアMOEのポートフォリオサイトです。"
