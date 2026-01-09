@@ -1,5 +1,9 @@
 import { SlArrowLeft,SlArrowRight } from "react-icons/sl";
 
+export const metadata = {
+  title: "I Like",
+};
+
 export default function Home() {
     return (
         <div className="contentBox">
