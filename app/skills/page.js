@@ -39,7 +39,7 @@ export default function Home() {
                         <section className="future gridContents">
                             <h3>これから</h3>
                             <p>バックエンドの開発にも興味があり、フルスタックエンジニアを目指します。</p>
-                            <p>スマートグラス向けアプリケーションの企画開発も気になっており、<br></br>注目しています。</p>
+                            <p>スマートグラス向けアプリケーションの企画開発も気になり、<br></br>注目しています。</p>
                         </section>
 
                 </div>

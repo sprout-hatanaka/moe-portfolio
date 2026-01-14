@@ -28,6 +28,21 @@
     }
 }
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateText {
+    0%, 25% {
+        text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+    }
+    30%, 100% {
+        text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
+    }
+}
+
 
 
 /* 共通 */
@@ -111,6 +126,9 @@ body p {
     margin-left: -20px;
     margin-right: 10px;
 }
+/* .head nav ul li:hover{
+    color: #000;
+} */
 .head nav .contact {
     margin-top: 20px;
     display: flex;
@@ -129,10 +147,14 @@ body p {
     margin-top: 15vh;
     /* background-color: aliceblue; */
 }
+
 .contentBox {
     width: 800px;
     margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
 }
+
 .contentBox h2 {
     font-weight: bold;
     font-size: 41px;
@@ -165,9 +187,34 @@ body p {
     display: flex;
     gap: 15px;
 }
+
 .contentBox .mainContent .scrollText {
     border-bottom: 1px solid;
+    font-size: 20px;
+    white-space: nowrap;
 }
+/* .contentBox .mainContent .scrollText:hover .letter {
+    text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
+} */
+.letter {
+    display: inline-block;
+    overflow: hidden; /* 1つ目の影を隠す */
+    color: transparent; /* テキスト本体は透明にする */
+    /*
+    影の設定
+    1つ目：Y方向の位置にマイナスに設定してテキスト本体の上に配置、ぼかしなし
+    2つ目：位置はテキスト本体と同じ、ぼかしなし
+    */
+    text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+
+    /* transition: text-shadow 0.2s;
+    transition-delay: calc(var(--index) * 0.05s); */
+
+    animation: rotateText 5s ease;
+    animation-delay: calc(var(--index) * 0.05s);
+    animation-iteration-count: infinite;
+}
+
 .contentBox .mainContent .scrollIcon {
     animation-name: bound;
     animation-duration: 2s;
@@ -236,7 +283,7 @@ body p {
 }
 
 .gridContents {
-    background-color: #eee;
+    background-color: rgba(220,220,220,0.5);
     padding: 15px;
     border-radius: 8px;
 }
