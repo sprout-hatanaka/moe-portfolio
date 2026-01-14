@@ -25,7 +25,7 @@ export default function Home() {
                         <span className="letter" style={{"--index": 3}}>a</span>
                         <span className="letter" style={{"--index": 4}}>s</span>
                         <span className="letter" style={{"--index": 5}}>e</span>
-                        <span className="letter" style={{"--index": 6}}> </span>
+                        <span className="letter" style={{"--index": 6}}>&nbsp;</span>
                         <span className="letter" style={{"--index": 7}}>S</span>
                         <span className="letter" style={{"--index": 8}}>c</span>
                         <span className="letter" style={{"--index": 9}}>r</span>

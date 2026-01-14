@@ -1,3 +1,6 @@
+import { workdatas } from "@/data/workdatas";
+import WorkCard from "@/components/WorkCard";
+
 export const metadata = {
   title: "Works",
 };
@@ -11,36 +14,11 @@ export default function Home() {
         </h2>
         <div className="mainContent">
             <section className="works">
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample①</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample②</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample③</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample④</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample⑤</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
-                <div className="work">
-                    <div className="workFigure"></div>
-                    <h3 className="worktTitle">Work Sample⑥</h3>
-                    <p className="workTools">JavaScript / React</p>
-                </div>
+
+                {workdatas.map((work) => (
+                    <WorkCard key={work.slug} work={work}/>
+                ))}
+
             </section>
         </div>
     </div>
