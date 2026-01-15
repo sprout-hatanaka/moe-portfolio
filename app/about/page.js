@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="profDetail">
                     <div className="detailImg" style={{background:"url(hand2.svg)"}}></div>
                     <h3 className="detailTitle">真面目な正直者</h3>
-                    <p className="detailCaption">真面目で嘘がつけない性格です。飾らずオープンに楽しく過ごしたいです。</p>
+                    <p className="detailCaption">真面目で正直な性格です。飾らずオープンに、楽しく過ごしたいです。</p>
                 </div>
             </section>
         </div>
