@@ -13,13 +13,18 @@ export const metadata = {
     template: "MOE - Portfolio | %s",
     default:  "MOE - Portfolio",
   },
-  description: "エンジニアMOEのポートフォリオサイトです。"
+  description: "MOEのポートフォリオサイトです。"
 };
 
 const RootLayout = ({children}) => {
   return (
     <html lang="ja">
-      <body className= {notoSansJP.className} style={{background:"url(bodybg2.png) no-repeat 98% top"}}>
+      <body className= {notoSansJP.className} style={{
+        backgroundImage:"url(bodybg2.png)",
+        backgroundRepeat:"no-repeat",
+        backgroundPosition:"98% top",
+        // backgroundColor:"#fefefe"
+      }}>
         <Header />
         <WheelHandler />
         <main className="mainArea">{children}</main>
