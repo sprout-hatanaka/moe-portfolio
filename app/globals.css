@@ -191,7 +191,7 @@ body p {
 .contentBox .mainContent .scrollText {
     border-bottom: 1px solid;
     font-size: 18px;
-    font-weight: bold;
+    /* font-weight: bold; */
     white-space: nowrap;
 }
 /* .contentBox .mainContent .scrollText:hover .letter {
@@ -230,14 +230,13 @@ body p {
     grid-template-rows: 225px 225px;
     grid-template-columns: 33% 33% 33%;
 }
-.workFigure {
-    width: 200px;
-    height: 120px;
-    border: 1px solid #aaa;
-    background-color: #fff;
+.works .imageWrapper:hover {
+    transform: translateY(2px);   
 }
 .works h3 {
-    padding-top: 3px;
+    padding-top: 8px;
+    /* font-weight: normal; */
+    font-size: 15px;
 }
 
 /* モーダル */
@@ -254,11 +253,70 @@ body p {
     align-items: center;
 }
 .modalContent {
-    width: 80vw;
-    height: 90vh;
+    width: 70vw;
+    height: 80vh;
     /* margin: auto auto; */
     background-color: #fff;
     position: relative;
+    display: flex;
+}
+.modalLeft {
+    width: 40%;
+    height: 80%;
+    margin: 5% 5% 5% 10%;
+    position: relative;
+    overflow: hidden;
+}
+.dummyBoxM {
+    width: 100%;
+    height: 100%;
+    border: #aaa 1px solid;
+    font-size: 20px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalRight {
+    width: 30%;
+    height: 60%;
+    margin: 10% 10% 10% 5%;
+}
+.modalRight h1 {
+    font-size: 20px;
+}
+.tools {
+    margin-top: 5px;
+}
+.links {
+    margin-top: 5px;
+}
+.links a {
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    border-radius: 12px;
+    padding-top: 2px;
+    /* border: #000 1px solid; */
+    font-size: 14px;
+    text-align: center;
+    background-color: #aaa;
+    color: #fff;
+}
+.links a.vercel{
+    width: 75px;
+}
+.links a:hover {
+    background-color: #666;
+    color: #fff;
+    transform: translateY(2px);
+}
+.description {
+    margin-top: 30px;
+    font-size: 14px;
+}
+.description p {
+    margin-top: 8px;
 }
 .closeButton {
     width: 50px;
@@ -266,9 +324,30 @@ body p {
     position: absolute;
     right: 5px;
     top: 5px;
-    border: #aaa 2px solid;
+    border: #aaa 1px solid;
     padding: 4px;
     color: #aaa;
+}
+.x1 {
+    width: 66px;
+    height: 1px;
+    background-color: #aaa;
+    transform: rotate(45deg);
+    transform-origin: left top 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.x2 {
+    width: 66px;
+    height: 1px;
+    background-color: #aaa;
+    transform: rotate(-45deg);
+    transform-origin: right bottom 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 
