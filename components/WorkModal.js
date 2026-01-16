@@ -39,7 +39,7 @@ const WorkModal = ({isOpenModal, setIsOpenModal, work}) => {
                             <h1>{work.title}</h1>
                             <p className="tools">{work.tools.join(" / ")}</p>
                             <div className="links">
-                                <a href={work.gitUrl}>GitHub</a>
+                                <a href={work.gitUrl} target="_blank">GitHub</a>
                                 &nbsp;&nbsp;
                                 <a href={work.vercelUrl} className="vercel">Vercel</a>
                             </div>
@@ -52,10 +52,6 @@ const WorkModal = ({isOpenModal, setIsOpenModal, work}) => {
                                 ))}
                             </div>
                         </div>
-
-
-
-
                     </div>
                 </div>
             }
