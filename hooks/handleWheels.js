@@ -30,12 +30,14 @@ export const useHandleWheels = () => {
                     router.push("/");
                 }
 
-                setTimeout(() => setIsAnimating(false), 800);
+                setTimeout(() => setIsAnimating(false), 100);
             }
             if (e.deltaY < 0) {
                 setIsAnimating(true);
 
-                if (pathname === "/works") {
+                if (pathname === "/") {
+                    router.push("/like");
+                } else if (pathname === "/works") {
                     router.push("/");
                 } else if (pathname === "/about") {
                     router.push("/works");
@@ -45,7 +47,7 @@ export const useHandleWheels = () => {
                     router.push("/skills");
                 }
 
-                setTimeout(() => setIsAnimating(false), 800);
+                setTimeout(() => setIsAnimating(false), 100);
             }
         };
 

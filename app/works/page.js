@@ -10,7 +10,7 @@ export default function Home() {
     <div className="contentBox">
         <h2>
             Works
-            <span className="jp">ー制作実績</span>
+            <span className="jp">制作実績</span>
         </h2>
         <div className="mainContent">
             <section className="works">

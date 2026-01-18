@@ -49,11 +49,10 @@
 body {
     /* background-color: #aaa; */
     min-height: 100vh;
-    /* font-family: "Noto Sans JP", sans-serif; */
     position: relative;
     display: flex;
     justify-content: center;
-    /* background: url(./bodybg.png) no-repeat 80% top; */
+    background: url(/bg1.png) no-repeat 98% top, url(/bg2.png) no-repeat left bottom, url(/bg3.png) no-repeat right bottom;
 }
 
 body p {
@@ -162,7 +161,7 @@ body p {
 .contentBox h2 .jp {
     font-weight: normal;
     font-size: 12px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 .contentBox h3 {
     font-size: 16px;
@@ -227,7 +226,7 @@ body p {
 /* Worksのみ反映 */
 .contentBox .mainContent .works {
     display: grid;
-    grid-template-rows: 225px 225px;
+    grid-template-rows: 200px 200px;
     grid-template-columns: 33% 33% 33%;
 }
 .works .imageWrapperOpen:hover {
@@ -485,7 +484,7 @@ body p {
     width: 100%;
     height: 18vh;
     padding: 10px;
-    color: #fff;
+    color: #aaa;
     /* background-color: #BBE6E6; */
     /* background: url(./gradient1.jpg) no-repeat left 70%/cover; */
     /* font-size: 12px; */

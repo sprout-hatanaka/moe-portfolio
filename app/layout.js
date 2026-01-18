@@ -19,12 +19,16 @@ export const metadata = {
 const RootLayout = ({children}) => {
   return (
     <html lang="ja">
-      <body className= {notoSansJP.className} style={{
+      <body className= {notoSansJP.className}>
+      {/* <body className= {notoSansJP.className} style={{
+        background:"url(bg1.png) no-repeat 98% top, url(bg6.png) no-repeat left bottom, url(bg7.png) no-repeat right bottom"
+      }}> */}
+      {/* <body className= {notoSansJP.className} style={{
         backgroundImage:"url(bodybg2.png)",
         backgroundRepeat:"no-repeat",
         backgroundPosition:"98% top",
-        // backgroundColor:"#fefefe"
-      }}>
+        backgroundColor:"#fefefe"
+      }}> */}
         <Header />
         <WheelHandler />
         <main className="mainArea">{children}</main>
