@@ -1,4 +1,4 @@
-import { SlArrowLeft,SlArrowRight } from "react-icons/sl";
+import LikeCarousel from "@/components/LikeCarousel";
 
 export const metadata = {
   title: "I Like",
@@ -14,15 +14,9 @@ export default function Home() {
             <div className="mainContent">
                 <div className="like">
                     <p>バイクで自然豊かな場所に出かけるのが好きです。</p>
-                    <section className="pictureSection">
-                        <div className="pictures">
-                            <div className="area1" style={{background:"url(IMG_6361.jpeg) no-repeat 60% 55%/130%"}}></div>
-                            <div className="area2" style={{background:"url(IMG_6391.jpeg) no-repeat left 55%/cover"}}></div>
-                            <div className="area3" style={{background:"url(IMG_6425.jpeg) no-repeat left 55%/cover"}}></div>
-                        </div>
-                        <button className="prevButton"><SlArrowLeft size={40} color="#fff"/></button>
-                        <button className="nextButton"><SlArrowRight size={40} color="#fff"/></button>
-                    </section>
+                    
+                    <LikeCarousel />
+                    
                 </div>
 
             </div>

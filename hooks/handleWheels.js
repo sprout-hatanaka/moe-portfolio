@@ -30,7 +30,7 @@ export const useHandleWheels = () => {
                     router.push("/");
                 }
 
-                setTimeout(() => setIsAnimating(false), 100);
+                setTimeout(() => setIsAnimating(false), 800);
             }
             if (e.deltaY < 0) {
                 setIsAnimating(true);
@@ -45,7 +45,7 @@ export const useHandleWheels = () => {
                     router.push("/skills");
                 }
 
-                setTimeout(() => setIsAnimating(false), 100);
+                setTimeout(() => setIsAnimating(false), 800);
             }
         };
 
