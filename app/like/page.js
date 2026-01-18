@@ -9,7 +9,7 @@ export default function Home() {
         <div className="contentBox">
             <h2>
                 I Like
-                <span className="jp">ー好きなこと</span>
+                <span className="jp">好きなこと</span>
             </h2>
             <div className="mainContent">
                 <div className="like">

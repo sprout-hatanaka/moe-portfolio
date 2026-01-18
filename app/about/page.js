@@ -7,7 +7,7 @@ export default function Home() {
     <div className="contentBox">
         <h2>
             About
-            <span className="jp">ー私について</span>
+            <span className="jp">私について</span>
         </h2>
         <div className="mainContent">
             <section className="profile">

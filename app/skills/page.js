@@ -7,7 +7,7 @@ export default function Home() {
         <div className="contentBox">
             <h2>
                 Skills
-                <span className="jp">ースキルセット</span>
+                <span className="jp">スキルセット</span>
             </h2>
             <div className="mainContent">
                 <div className="skills">
