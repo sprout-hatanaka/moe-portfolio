@@ -443,31 +443,25 @@ body p {
 }
 
 /* Likeのみ反映 */
-/* .mainContent .like p {
-    letter-spacing: .03rem;
-} */
-
 .mainContent .pictureSection {
     width: 800px;
     margin-top: 20px;
-    position: absolute;
+    height: 330px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+    position: relative;
 }
 .pictureSection .pictures {
-    display: grid;
-    grid-template-rows: 330px;
-    grid-template-columns: 32% 49% 13%;
-    column-gap: 3%;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
 }
-/* .area1 {
-    background-color: #aaa;
+.pictures img {
+    height: 330px;
+    width: auto;
+    flex-shrink: 0;
 }
-.area2 {
-    background-color: #aaa;
-}
-.area3 {
-    background-color: #aaa;
-} */
-.pictureSection .prevButton {
+.pictureSection .backButton {
     position: absolute;
     left: -1%;
     top: 43%;
@@ -477,7 +471,11 @@ body p {
     right: -1%;
     top: 43%;
 }
-
+.backButton:disabled,
+.nextButton:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
 
 
 /* ----------------------------------------------------------------------- */
