@@ -4,7 +4,7 @@ import { SlArrowLeft,SlArrowRight } from "react-icons/sl";
 import Image from "next/image";
 import { useState } from "react";
 
-const widths = [273, 410, 334, 254, 273, 410, 334, 254];
+const widths = [283, 400, 334, 254, 273, 410, 334, 254];
 
 const LikeCarousel = () => {
 

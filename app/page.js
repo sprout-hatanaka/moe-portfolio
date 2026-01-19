@@ -5,7 +5,7 @@ export default function Home() {
         <div className="contentBox">
             <h2 className="top">
                 <span className="job">Engineer</span><br></br>
-                MOE HATANAKA / Portfolio Site
+                <span className="topTitle">MOE HATANAKA / Portfolio Site</span>
             </h2>
             <div className="mainContent">
                 <section className="message">
