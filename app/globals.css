@@ -56,14 +56,14 @@ body {
 }
 
 body p {
-    font-size: 14px;
+    font-size: calc(9px + 0.5vh);
     line-height: 25px;
 }
 
 /* ヘッダー */
 .head {
-    width: 300px;
-    margin-top: 66px;
+    width: 180px;
+    margin-top: 7vh;
     /* background-color: bisque; */
 }
 .head .logo {
@@ -103,17 +103,14 @@ body p {
     left: 25%;
     animation: rotateRight 4s linear infinite;
 }
-
-
-
 .head nav {
-    width: 300px;
-    margin: 40px auto;
+    width: 100px;
+    margin: 4vh auto;
 }
 .head nav ul li {
-    font-size: 30px;
+    font-size: 2.8vh;
     font-weight: bold;
-    line-height: 46px;
+    line-height: 4.5vh;
     color: #aaa;
 }
 .head nav ul li.active{
@@ -125,9 +122,9 @@ body p {
     margin-left: -20px;
     margin-right: 10px;
 }
-/* .head nav ul li:hover{
+.head nav ul li a:hover{
     color: #000;
-} */
+}
 .head nav .contact {
     margin-top: 20px;
     display: flex;
@@ -142,13 +139,15 @@ body p {
 /* ----------------------------------------------------------------------- */
 /* メイン */
 .mainArea {
-    width: 1000px;
-    margin-top: 15vh;
-    /* background-color: aliceblue; */
+    min-width: 900px;
+    width: 60vw;
+    margin-top: 20vh;
 }
 
 .contentBox {
     width: 800px;
+    height: 500px;
+    /* background-color: aquamarine; */
     margin: 0 auto;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
@@ -156,40 +155,44 @@ body p {
 
 .contentBox h2 {
     font-weight: bold;
-    font-size: 41px;
+    font-size: calc(25px + 1.5vh);
 }
 .contentBox h2 .jp {
     font-weight: normal;
-    font-size: 12px;
+    font-size: calc(7px + 0.5vh);
     padding-left: 20px;
 }
 .contentBox h3 {
-    font-size: 16px;
+    font-size: calc(11px + 0.5vh);
     font-weight: bold;
 }
 .contentBox .mainContent {
-    margin-top: 40px;
+    margin-top: 4vh;
+    /* background-color: cadetblue; */
 }
 
 
 /* Topのみ反映 */
 .contentBox h2.top {
-    padding-top: 50px;
-    line-height: 46px;
-    font-size: 45px;
+    padding-top: 5vh;
+    line-height: calc(10px + 4vh);
+    font-size:  calc(28px + 1.5vh);
 }
 .contentBox h2 .job {
-    font-size: 26px;
+    font-size:  calc(18px + 0.5vh);
+}
+.contentBox h2 .topTitle {
+    letter-spacing: .02em
 }
 .contentBox .mainContent .scroll {
-    margin-top: 40px;
+    margin-top: 5vh;
     display: flex;
     gap: 15px;
 }
 
 .contentBox .mainContent .scrollText {
     border-bottom: 1px solid;
-    font-size: 18px;
+    font-size: calc(14px + 0.5vh);
     /* font-weight: bold; */
     white-space: nowrap;
 }
@@ -227,11 +230,12 @@ body p {
 .contentBox .mainContent .works {
     display: grid;
     grid-template-rows: 200px 200px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 270px 270px 270px;
+    gap: 20px;
 }
 .works .imageWrapperOpen:hover {
-    transform: translateY(1px);
-    filter: drop-shadow(0 0 0.1rem #ddd);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 0.1rem rgba(0,0,0,0.15));
 }
 .works .imageWrapperClose {
     width: 210px;
@@ -244,10 +248,17 @@ body p {
     justify-content: center;
     align-items: center;
 }
+.works .titleIcon {
+    display: flex;
+    justify-content: space-between;
+}
 .works h3 {
     padding-top: 8px;
     /* font-weight: normal; */
     font-size: 15px;
+}
+.work {
+    width: 220px;
 }
 
 /* モーダル */
@@ -394,7 +405,7 @@ body p {
 .detailCaption {
     width: 80%;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: calc(8px + 0.5vh);
     font-weight: normal;
     text-align: justify;
 }
@@ -404,7 +415,7 @@ body p {
     /* padding-top: 15px; */
     display: grid;
     grid-template-rows: 190px 190px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 260px 260px 260px ;
     gap: 10px;
 }
 
@@ -437,8 +448,8 @@ body p {
     list-style-type: disc;
     list-style-position: inside;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: calc(9px + 0.5vh);
+    line-height: 25px;
 }
 
 /* Likeのみ反映 */

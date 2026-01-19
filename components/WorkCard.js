@@ -3,6 +3,8 @@
 import WorkModal from "@/components/WorkModal";
 import { useState } from "react";
 import Image from "next/image";
+import { RxOpenInNewWindow } from "react-icons/rx";
+import { TfiNewWindow } from "react-icons/tfi";
 
 const WorkCard = ({work}) => {
 
@@ -19,6 +21,7 @@ const WorkCard = ({work}) => {
                         height={122}
                         style={{ cursor: 'pointer', border: '1px #aaa solid'}}
                     />
+
                 </div>
             ) : (
                 <div className="imageWrapperClose">
@@ -26,7 +29,9 @@ const WorkCard = ({work}) => {
                 </div>
             )}
 
-            <h3 className="worktTitle">{work.title}</h3>
+            <div className="titleIcon">
+                <h3 className="worktTitle">{work.title}</h3>&nbsp;&nbsp;<TfiNewWindow />
+            </div>
             <p className="workTools">{work.tools.join(" / ")}</p>
             <WorkModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} work={work}/>
         </div>
